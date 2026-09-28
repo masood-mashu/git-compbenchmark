@@ -1,0 +1,18 @@
+name: transparency-band-formatter
+version: 1.0.0
+description: "Formats legally compliant salary range disclosures for job requisition descriptions"
+input_schema:
+  type: object
+  properties:
+    band_extremes_json:
+      type: string
+      description: "JSON string with min_salary and max_salary in USD"
+  required:
+    - band_extremes_json
+implementation:
+  type: script
+  path: transparency_band_formatter.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true

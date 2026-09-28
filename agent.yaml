@@ -1,0 +1,39 @@
+spec_version: "0.1.0"
+name: git-compbenchmark
+version: 1.0.0
+description: "Autonomous Compensation Equity, Salary Band Parity & Equal Pay Compliance Agent"
+author: "masood-mashu"
+license: "Apache-2.0"
+
+model:
+  preferred: "openai:gpt-4o"
+  fallback:
+    - "anthropic:claude-3-5-sonnet"
+    - "openai:gpt-4o-mini"
+  constraints:
+    temperature: 0.1
+    max_tokens: 4096
+
+skills:
+  - compa-ratio-benchmarking
+  - equal-pay-parity-auditing
+
+tools:
+  - compa-ratio-calculator
+  - pay-equity-parity-checker
+  - transparency-band-formatter
+
+runtime:
+  max_turns: 50
+  timeout: 120
+
+tags:
+  - hr-recruiting
+  - compensation-equity
+  - equal-pay
+  - salary-benchmarking
+  - passport-challenge
+
+metadata:
+  passport_id: "aps-compbenchmark-01"
+  passport_category: "HR & recruiting"

@@ -1,0 +1,18 @@
+name: pay-equity-parity-checker
+version: 1.0.0
+description: "Audits internal peer group salary variance to prevent demographic pay disparities"
+input_schema:
+  type: object
+  properties:
+    salaries_json:
+      type: string
+      description: "JSON string with group_a_mean and group_b_mean salary numbers"
+  required:
+    - salaries_json
+implementation:
+  type: script
+  path: pay_equity_parity_checker.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true
