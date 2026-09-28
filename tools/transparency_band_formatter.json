@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "transparency_band_formatter",
+  "description": "Formats legally compliant salary range disclosures for job descriptions",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "band_extremes_json": {
+        "type": "string",
+        "description": "JSON string with min_salary and max_salary"
+      }
+    },
+    "required": [
+      "band_extremes_json"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "pay_equity_parity_checker",
+  "description": "Audits internal peer group salary variance to prevent demographic disparities",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "salaries_json": {
+        "type": "string",
+        "description": "JSON string with group_a_mean and group_b_mean"
+      }
+    },
+    "required": [
+      "salaries_json"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "compa_ratio_calculator",
+  "description": "Calculates compa-ratio of proposed salary against job band midpoint",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "comp_data_json": {
+        "type": "string",
+        "description": "JSON string containing proposed_salary and band_midpoint"
+      }
+    },
+    "required": [
+      "comp_data_json"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}
